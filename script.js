@@ -1,14 +1,13 @@
 function firstNonRepeatedChar(str) {
- // Write your code here
-	const charCount = {}; // Step 1: Initialize a frequency map
+  const charCount = {};
 
-  // Step 2: Populate the frequency map
+  // Populate the frequency map
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
     charCount[char] = (charCount[char] || 0) + 1;
   }
 
-  // Step 3: Find the first non-repeated character
+  // Find the first non-repeated character
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
     if (charCount[char] === 1) {
@@ -16,8 +15,9 @@ function firstNonRepeatedChar(str) {
     }
   }
 
-  // Step 4: Handle cases with no non-repeated character or empty string
+  // Handle cases with no non-repeated character or empty string
   return null;
 }
+
 const input = prompt("Enter a string");
-alert(firstNonRepeatedChar(input)); 
+alert(firstNonRepeatedChar(input));
